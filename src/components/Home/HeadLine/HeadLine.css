@@ -1,0 +1,21 @@
+* {
+    font-family: poppins;
+}
+
+.price {
+    position: absolute;
+    width: 35px;
+    height: 18px;
+    left: 0px;
+    top: calc(80% - 18px/2 + 13.5px);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    margin-left: 27px;
+    /* identical to box height */
+    text-decoration-line: line-through;
+    /* C1/C */
+    color: #A9A9A9;
+}

@@ -1,0 +1,25 @@
+* {
+    font-family: poppins;
+}
+
+.drop {
+    height: auto;
+    width: 50%;
+}
+
+.fresh {
+    font-weight: bold;
+}
+
+.drop {
+    height: auto;
+    width: 50%;
+    justify-content: center;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.link span {
+    margin-left: 20px;
+    font-size: 18px;
+}
