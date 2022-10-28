@@ -2,10 +2,10 @@ import { React } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { BsChevronRight } from "react-icons/bs";
-import { useState,useEffect } from "react";
-import axios from 'axios';
-import { CDBSidebar,CDBSidebarContent,CDBSidebarFooter, CDBSidebarHeader,CDBSidebarMenu, CDBSidebarMenuItem} from 'cdbreact';
-
+// import { useState,useEffect } from "react";
+// import axios from 'axios';
+// import { CDBSidebar,CDBSidebarContent,CDBSidebarFooter, CDBSidebarHeader,CDBSidebarMenu, CDBSidebarMenuItem} from 'cdbreact';
+import {SideNav} from '../SideNav'
 
 
 export function CategoryMenu() {
@@ -21,13 +21,11 @@ export function CategoryMenu() {
   // };
 
 
-    return (
-
-
-    <div className="main">
+    return (<>
+  <div className="main">
       <div className="container">
         <div className="row">
-          <div className="col-lg-3 mt-5">
+          <div className="col-lg-3 mt-5 ">
             <h4 style={{ "fontWeight": "bold" }}>Category menu</h4>
             <u style={{ color: "#6A983C" }}>
               <h6>Bakery</h6>
@@ -85,5 +83,8 @@ export function CategoryMenu() {
         </div>
       </div>
       </div>
+     
+      </>
+     
       )
       }

@@ -2,29 +2,24 @@ import { React } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { BsChevronRight } from "react-icons/bs";
-// import beckry from '../../public/images/bakery.png'
-import { beckry, mk } from "../../../assests/images/bakery.png";
-import { useState,useEffect } from "react";
-import axios from 'axios';
+// import { beckry, mk } from "../../../assests/images/bakery.png";
+// import { useState,useEffect } from "react";
+// import axios from 'axios';
 import './Customers.css'
-import { CDBSidebar,CDBSidebarContent,CDBSidebarFooter, CDBSidebarHeader,CDBSidebarMenu, CDBSidebarMenuItem} from 'cdbreact';
-
+// import { CDBSidebar,CDBSidebarContent,CDBSidebarFooter, CDBSidebarHeader,CDBSidebarMenu, CDBSidebarMenuItem} from 'cdbreact';
+import {Swiper,SwiperSlide} from 'swiper/react';
+import SwiperCore,{ Autoplay } from "swiper";
+import 'swiper/css';
+// import 'swiper/css/free-mode';
+import 'swiper/css/autoplay';
+import {HeadLine} from '../HeadLine';
 
 
 export function Customers() {
-  // const baseURL = "https://freshness12.herokuapp.com/user/userdata";
-  // const [post, setPost] = React.useState([]);
-  // useEffect(() => {
-  //   loadProducts();
-  // }, []);
-  // const loadProducts = async () => {
-  //   const result = await axios.get(baseURL);
-  //   setPost(result.data);
-  //   console.log(result.data);
-  // };
+ 
+  SwiperCore.use([Autoplay]);
 
-
-    return (
+    return (<>
     <div>
          <div className="main3 ">
         <div className="container">
@@ -45,7 +40,157 @@ export function Customers() {
               </div>
             </div>
           </div>
-          <div className="row">
+
+
+
+          <div className="container">
+          <Swiper 
+          // autoplay
+          //      grabCursor={true}
+          //      modules={[Autoplay]}
+          //      className="mySwiper"
+          //      slidesPerView={4}
+          //      spaceBetween={30}
+          // className="home_slider"
+          // modules={[Autoplay]}
+          // slidesPerView={4}
+          // spaceBetween={40}
+          // onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // pagination={{ clickable: true }}
+          // autoplay
+          // modules={[Autoplay]}
+          // pagination={{clickable: true}}
+          // slidesPerView={4}
+          // spaceBetween={40}
+          // autoplay={{
+          //       delay: 2000,
+          //       pauseOnMouseEnter: true,
+          //       disableOnInteraction: false
+          //      }}
+          // loop
+          // className='swiper-container'
+          slidesPerView={4}
+          spaceBetween={50} centeredSlides={true} autoplay={{
+            "delay": 0,
+            "disableOnInteraction": false
+          }} pagination={{
+            "clickable": true
+          }} navigation={true} className="mySwiper"
+              >
+             <SwiperSlide>
+          
+            <div className="col-lg-3 mt-5">
+              <Card style={{ width: "20rem" }}>
+                <Card.Body>
+                  <Card.Text style={{ "textAlign": "center" }}>
+                    {" "}
+                    “ This is an super space for your customers qoute. Don’t
+                    worry it works smooth as pie. You will get all what you need
+                    by writiing a text here “
+                  </Card.Text>
+                  <Card.Title style={{ "textAlign": "center" }}>
+                   Name and Surname
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+             </SwiperSlide>
+
+             <SwiperSlide>
+             <div className="col-lg-3 mt-5">
+              <Card style={{ width: "20rem" }}>
+                <Card.Body>
+                  <Card.Text style={{ "textAlign": "center" }}>
+                    {" "}
+                    “ This is an super space for your customers qoute. Don’t
+                    worry it works smooth as pie. You will get all what you need
+                    by writiing a text here “
+                  </Card.Text>
+                  <Card.Title style={{ "textAlign": "center" }}>
+                    Name and Surname
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+             </SwiperSlide>
+
+             <SwiperSlide>
+             <div className="col-lg-3 mt-5">
+              <Card style={{ width: "20rem" }}>
+                <Card.Body>
+                  <Card.Text style={{ "textAlign": "center" }}>
+                    {" "}
+                    “ This is an super space for your customers qoute. Don’t
+                    worry it works smooth as pie. You will get all what you need
+                    by writiing a text here “
+                  </Card.Text>
+                  <Card.Title style={{ "textAlign": "center" }}>
+                    Name and Surname
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+             </SwiperSlide>
+
+             <SwiperSlide>
+             <div className="col-lg-3 mt-5">
+              <Card style={{ width: "20rem" }}>
+                <Card.Body>
+                  <Card.Text style={{ "textAlign": "center" }}>
+                    {" "}
+                    “ This is an super space for your customers qoute. Don’t
+                    worry it works smooth as pie. You will get all what you
+                    needby writiing a text here “
+                  </Card.Text>
+                  <Card.Title style={{ "textAlign": "center" }}>
+                   Name and Surname
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+             
+            </div>
+             </SwiperSlide>
+
+             <SwiperSlide>
+             <div className="col-lg-3 mt-5">
+              <Card style={{ width: "20rem" }}>
+                <Card.Body>
+                  <Card.Text style={{ "textAlign": "center" }}>
+                    {" "}
+                    “ This is an super space for your customers qoute. Don’t
+                    worry it works smooth as pie. You will get all what you
+                    needby writiing a text here “
+                  </Card.Text>
+                  <Card.Title style={{ "textAlign": "center" }}>
+                   Name and Surname
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+             
+            </div>
+             </SwiperSlide>
+
+             <SwiperSlide>
+             <div className="col-lg-3 mt-5">
+              <Card style={{ width: "20rem" }}>
+                <Card.Body>
+                  <Card.Text style={{ "textAlign": "center" }}>
+                    {" "}
+                    “ This is an super space for your customers qoute. Don’t
+                    worry it works smooth as pie. You will get all what you
+                    needby writiing a text here “
+                  </Card.Text>
+                  <Card.Title style={{ "textAlign": "center" }}>
+                   Name and Surname
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+             
+            </div>
+             </SwiperSlide>
+              </Swiper>
+          {/* <div className="row">
             <div className="col-lg-3 mt-5">
               <Card style={{ width: "20rem" }}>
                 <Card.Body>
@@ -105,16 +250,16 @@ export function Customers() {
                   </Card.Title>
                 </Card.Body>
               </Card>
-              {/* <div
-          className="border border-success rounded-circle"
-          style={{ width: 50, height: 50, margin: 50 }}>
-          <div className="h-100 d-flex justify-content-center align-items-center"></div>
-        </div> */}
+             
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-    </div>     
+      </div>
+      </div>
+    
+   </>
+
    
 
   );

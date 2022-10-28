@@ -1,10 +1,29 @@
+import React from "react";
 import { CDBSidebar, CDBSidebarFooter } from "cdbreact"
 import { Button, Card } from "react-bootstrap"
 import { BsChevronRight } from "react-icons/bs"
-import  beckry  from "../../../assests/images/bakery.png";
+// import  beckry  from "../../../assests/images/bakery.png";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import {Customers} from '../Customers';
 
 export function SideNav(){
-    return (
+
+  const baseURL = "https://freshness12.herokuapp.com/user/userdata";
+
+  const [post,setPost] = React.useState([]);
+
+  useEffect(() => {
+    loadProducts();
+  }, []);
+
+  const loadProducts = async () => {
+    const result = await axios.get(baseURL);
+    setPost(result.data);
+    console.log(result.data);
+  };
+
+    return (<>
     <div className="container">
         {/* side navbar code */}
       {/* <CDBSidebar> */}
@@ -41,9 +60,28 @@ export function SideNav(){
       </CDBSidebarFooter>
       </CDBSidebar>
 
+
+
+
+        {post.map((m) => (
+            <div key={m["_id"]} className="col-3 mt-5">
+              <Card style={{ width: "15rem" }}>
+               <Card.Img variant="top" src={m?.image} />
+               <Card.Body>
+                <Card.Title className="title">{m?.title}</Card.Title>
+                <Card.Text className="description">{m?.discription}</Card.Text>
+                <Button variant="light" className="USDButton">
+                  {m?.price} USD
+                </Button>
+                <Button className="buyNow">Buy Now</Button>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
+
      {/* {
          post.map((m)=>{   */}
-          <div key={['_id']} className="col-lg-3">
+          {/* <div key={['_id']} className="col-lg-3">
           <Card style={{ width: "18rem",'marginTop':'50px','height':'22rem' }}>
             <Card.Img variant="top" src={beckry} alt="beckry" />
             <Card.Body>
@@ -64,7 +102,7 @@ export function SideNav(){
               </Button>
             </Card.Body>
           </Card>
-          </div> 
+          </div>  */}
 {/* 
          })
      } */}
@@ -352,5 +390,7 @@ export function SideNav(){
         </div>
       </div> */}
       </div>
+   
+      </>
     )
 }

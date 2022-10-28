@@ -8,7 +8,7 @@ import  bakery  from "../../../assests/images/bakery.png";
 // import axios from 'axios';
 // import { CDBSidebar,CDBSidebarContent,CDBSidebarFooter, CDBSidebarHeader,CDBSidebarMenu, CDBSidebarMenuItem} from 'cdbreact';
 import './HeadLine.css'
-
+import { Blogs } from "../Blogs";
 
 
 export function HeadLine() {
@@ -24,7 +24,7 @@ export function HeadLine() {
   // };
 
 
-    return (
+    return (<>
         <div className="main4 ">
         <div className="container">
           <div className="row">
@@ -142,6 +142,7 @@ export function HeadLine() {
           </div>
         </div>
       </div>
-
+   
+ </>
     );
 }
