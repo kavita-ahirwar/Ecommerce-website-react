@@ -1,0 +1,33 @@
+* {
+    font-family: poppins;
+}
+
+.fruit {
+    margin-left: 15px;
+}
+
+.vegetable {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    font-size: 10px;
+}
+
+.butn {
+    color: #A9A9A9;
+    font-size: 17px;
+}
+
+.btnn {
+    color: #6A983C;
+    font-size: 20px;
+}
+
+.para {
+    color: #A9A9A9;
+}
