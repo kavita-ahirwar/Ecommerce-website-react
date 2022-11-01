@@ -33,3 +33,20 @@
     font-size: 20px;
     margin-left: 15px;
 }
+
+.btnnnn {
+    height: 50px;
+    width: 130px;
+    color: #A9A9A9;
+    border-radius: 10px;
+    border-color: black;
+}
+
+.btnnn {
+    height: 60px;
+    width: 100px;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}

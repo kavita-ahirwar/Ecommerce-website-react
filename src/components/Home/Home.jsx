@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export function Home(){
    
-   const [isGridView,setGridView]=useState(false);
+   const [isGridView,setGridView]=useState(true);
   return(<>
   {
      isGridView ? <GridView/> : <ListView/>

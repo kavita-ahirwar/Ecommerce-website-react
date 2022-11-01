@@ -1,4 +1,4 @@
-import { FruitNav,Card,SideBar,ButtonNav } from "../../CategoryList";
+import { FruitNav,Cards,SideBar,ButtonNav } from "../../CategoryList";
 
 export function ListView(){
     return (
@@ -6,7 +6,7 @@ export function ListView(){
         <FruitNav/>
         
         <SideBar/>
-        {/* <Card/> */}
+        {/* <Cards/> */}
         </>
     );
 }
