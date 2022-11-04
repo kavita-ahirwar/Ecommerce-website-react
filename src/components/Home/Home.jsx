@@ -1,23 +1,17 @@
-import { GridView } from "./GridView/GridView";
-import { ListView } from "./ListView";
-import { useState } from "react";
-// import { SideNav } from "./SideNav";
-// import { Customers } from "./Customers";
-// import { HeadLine } from "./HeadLine";
-// import { Blogs } from "./Blogs";
+
+import { SideNav } from "./SideNav";
+import { Customers } from "./Customers";
+import { HeadLine } from "./HeadLine";
+import { Blogs } from "./Blogs";
+import { CategoryMenu } from "./CategoryMenu";
+
 
 export function Home(){
-   
-   const [isGridView,setGridView]=useState(true);
   return(<>
-  {
-     isGridView ? <GridView/> : <ListView/>
-   
-  }
-  {/* <GridView/> */}
-  {/* <SideNav/>
+  <CategoryMenu/>
+  <SideNav/>
   <Customers/>
   <HeadLine/>
-  <Blogs/> */}
+  <Blogs/>
   </>);
 }

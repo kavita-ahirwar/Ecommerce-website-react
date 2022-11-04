@@ -1,4 +1,4 @@
 export *from  './Footers';
 export *from  './Headers';
 export *from './Home';
-export *from './CategoryList';
+export *from './Inventory';

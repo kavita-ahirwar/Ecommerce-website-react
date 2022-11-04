@@ -2,40 +2,24 @@ import { React } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { BsChevronRight } from "react-icons/bs";
-// import beckry from '../../public/images/bakery.png'
-import  bakery  from "../../../assests/images/bakery.png";
-// import { useState,useEffect } from "react";
-// import axios from 'axios';
-// import { CDBSidebar,CDBSidebarContent,CDBSidebarFooter, CDBSidebarHeader,CDBSidebarMenu, CDBSidebarMenuItem} from 'cdbreact';
-import './HeadLine.css'
+import bakery from "../../../assests/images/bakery.png";
+import "./HeadLine.css";
 import { Blogs } from "../Blogs";
 
-
 export function HeadLine() {
-  // const baseURL = "https://freshness12.herokuapp.com/user/userdata";
-  // const [post, setPost] = React.useState([]);
-  // useEffect(() => {
-  //   loadProducts();
-  // }, []);
-  // const loadProducts = async () => {
-  //   const result = await axios.get(baseURL);
-  //   setPost(result.data);
-  //   console.log(result.data);
-  // };
-
-
-    return (<>
-        <div className="main4 ">
+  return (
+    <>
+      <div className="main4 ">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6" style={{ "marginTop": "100px" }}>
+            <div className="col-lg-6" style={{ marginTop: "100px" }}>
               <div className="heading">
-                <h3 style={{ "marginLeft": "10px", "fontWeight": "bold" }}>
+                <h3 style={{ marginLeft: "10px", fontWeight: "bold" }}>
                   Section Headline
                 </h3>
               </div>
             </div>
-            <div className="col-lg-6" style={{ "marginTop": "100px" }}>
+            <div className="col-lg-6" style={{ marginTop: "100px" }}>
               <div className="butn">
                 <Button className="btn m-lg-2" variant="none">
                   Button
@@ -56,7 +40,7 @@ export function HeadLine() {
                   <Button
                     variant="Light"
                     className="USDButton "
-                    style={{ "marginRight": "10px" }}
+                    style={{ marginRight: "10px" }}
                   >
                     1.48 USD
                   </Button>
@@ -78,7 +62,7 @@ export function HeadLine() {
                   <Button
                     variant="Light"
                     className="USDButton "
-                    style={{ "marginRight": "10px" }}
+                    style={{ marginRight: "10px" }}
                   >
                     1.48 USD
                   </Button>
@@ -100,7 +84,7 @@ export function HeadLine() {
                   <Button
                     variant="Light"
                     className="USDButton "
-                    style={{ "marginRight": "10px" }}
+                    style={{ marginRight: "10px" }}
                   >
                     1.48 USD
                   </Button>
@@ -110,7 +94,7 @@ export function HeadLine() {
                   </Button>
                   <h6
                     className="price"
-                    style={{ width: "65px", "marginTop": "35px" }}
+                    style={{ width: "65px", marginTop: "35px" }}
                   >
                     0.28 USD
                   </h6>
@@ -128,7 +112,7 @@ export function HeadLine() {
                   <Button
                     variant="Light"
                     className="USDButton "
-                    style={{ "marginRight": "10px" }}
+                    style={{ marginRight: "10px" }}
                   >
                     1.48 USD
                   </Button>
@@ -142,7 +126,6 @@ export function HeadLine() {
           </div>
         </div>
       </div>
-   
- </>
-    );
+    </>
+  );
 }

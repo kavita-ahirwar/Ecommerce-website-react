@@ -1,17 +1,16 @@
 import React from "react";
-import { CDBSidebar, CDBSidebarFooter } from "cdbreact"
-import { Button, Card } from "react-bootstrap"
-import { BsChevronRight } from "react-icons/bs"
-import  beckry  from "../../../assests/images/bakery.png";
+import { CDBSidebar, CDBSidebarFooter } from "cdbreact";
+import { Button, Card } from "react-bootstrap";
+import { BsChevronRight } from "react-icons/bs";
+import beckry from "../../../assests/images/bakery.png";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import {Customers} from '../Customers';
+import { Customers } from "../Customers";
 
-export function SideNav(){
+export function SideNav() {
+  const baseURL = "https://freshness12.herokuapp.com/product-category/bakery";
 
-  const baseURL = "https://freshness12.herokuapp.com/user/userdata";
-
-  const [post,setPost] = React.useState([]);
+  const [post, setPost] = React.useState([]);
 
   useEffect(() => {
     loadProducts();
@@ -23,63 +22,88 @@ export function SideNav(){
     console.log(result.data);
   };
 
-    return (<>
-    <div className="container">
-        {/* side navbar code */}
-      {/* <CDBSidebar> */}
+  return (
+    <>
+      <div className="container">
+        <div className="row mt-5">
+          <div className="col-lg-3">
+            <CDBSidebar style={{ backgroundColor: "white" }}>
+              <CDBSidebarFooter>
+                <h4
+                  style={{
+                    fontWeight: "bold",
+                    color: "black",
+                    marginTop: "50px",
+                  }}
+                >
+                  Best selling products{" "}
+                </h4>
+                <u style={{ color: "#6A983C" }}>
+                  <h6>Kitchen</h6>
+                  <h6>Meat and fish</h6>
+                  <h6>Special nutrition</h6>
+                  <h6>Pharmacy</h6>
+                  <h6>Baby</h6>
+                </u>
+                <Button
+                  className="btn mt-2"
+                  variant="outline-secondary"
+                  style={{ marginLeft: "10px" }}
+                >
+                  More categories
+                  <BsChevronRight />
+                </Button>{" "}
+                <h4
+                  style={{
+                    fontWeight: "bold",
+                    color: "black",
+                    marginTop: "250px",
+                  }}
+                >
+                  Best selling products{" "}
+                </h4>
+                <u style={{ color: "#6A983C" }}>
+                  <h6>Kitchen</h6>
+                  <h6>Meat and fish</h6>
+                  <h6>Special nutrition</h6>
+                  <h6>Pharmacy</h6>
+                  <h6>Baby</h6>
+                </u>
+                <Button
+                  className="btn mt-2"
+                  variant="outline-secondary"
+                  style={{ marginLeft: "10px" }}
+                >
+                  More categories
+                  <BsChevronRight />
+                </Button>{" "}
+              </CDBSidebarFooter>
+            </CDBSidebar>
+          </div>
 
-      <div className="row mt-5"  >
-        <CDBSidebar style={{'backgroundColor':'white'}}>
-      <CDBSidebarFooter>
-            <h4 style={{ "fontWeight": "bold", 'color':'black' ,'marginTop':'50px'}}>Best selling products </h4>
-            <u style={{ color: "#6A983C" }}>
-              <h6>Kitchen</h6>
-              <h6>Meat and fish</h6>
-              <h6>Special nutrition</h6>
-              <h6>Pharmacy</h6>
-              <h6>Baby</h6>
-            </u>
-            <Button
-              className="btn mt-2"
-              variant="outline-secondary"
-              style={{ "marginLeft": "10px" }}
-            >
-              More categories
-              <BsChevronRight />
-            </Button>{" "}
-        
-            <h4 style={{ "fontWeight": "bold" ,'color':'black' ,'marginTop':'250px'}}>Best selling products </h4>
-            <u style={{ color: "#6A983C" }}>
-              <h6>Kitchen</h6>
-              <h6>Meat and fish</h6>
-              <h6>Special nutrition</h6>
-              <h6>Pharmacy</h6>
-              <h6>Baby</h6>
-            </u>
-            <Button className="btn mt-2" variant="outline-secondary" style={{ "marginLeft": "10px" }}>More categories<BsChevronRight /></Button>{" "}
-      </CDBSidebarFooter>
-      </CDBSidebar>
-
-
-
-
-        {post.map((m) => (
+          {/* {post.map((m) => (
             <div key={m["_id"]} className="col-3 mt-5">
-              <Card style={{ width: "15rem" }}>
-               <Card.Img variant="top" src={m?.image} />
+              <Card style={{ width: "16rem" ,'height':'24rem'}}>
+               <Card.Img variant="top" style={{'width':'238px','height':'160px','textAlign':'center','marginTop':'5px','marginLeft':'7px','marginRight':'10px'}} src={m?.image} />
                <Card.Body>
-                <Card.Title className="title">{m?.title}</Card.Title>
+                <Card.Title className="title" style={{'fontWeight':'bold'}}>{m?.title}</Card.Title>
                 <Card.Text className="description">{m?.discription}</Card.Text>
-                <Button variant="light" className="USDButton">
+                <Button variant="none" className="USDButton">
+                <h6
+                    className="price"
+                    style={{ width: "65px", "marginTop": "35px" }}
+                  >
+                    0.28 USD
+                  </h6>
                   {m?.price} USD
                 </Button>
-                <Button className="buyNow">Buy Now</Button>
+                <Button className="buyNow" variant="success">Buy Now</Button>
               </Card.Body>
             </Card>
           </div>
-        ))}
+        ))} */}
 
-     {/* {
+          {/* {
          post.map((m)=>{   */}
           {/* <div key={['_id']} className="col-lg-3">
           <Card style={{ width: "18rem",'marginTop':'50px','height':'22rem' }}>
@@ -103,89 +127,230 @@ export function SideNav(){
             </Card.Body>
           </Card>
           </div>  */}
-{/* 
+          {/* 
          })
      } */}
 
-       {/* <div className="col-lg-3">
-          <Card style={{ width: "17rem",'marginTop':'50px','height':'22rem' }}>
-              <Card.Img variant="top" src={beckry} alt="beckry" />
-              <Card.Body>
-                <Card.Title style={{ color: "black" }}>
-                  Product Title
-                </Card.Title>
-                <Card.Text>Space for a small product description </Card.Text>
-                <Button
-                  variant="Light"
-                  className="USDButton "
-                  style={{ "margin-right": "10px" }}
-                >
-                  1.48 USD
+          <div className="col-lg-9">
+            <div className="row">
+                 {post.map((m) => (
+            <div key={m["_id"]} className="col-4 mt-5">
+              <Card style={{ width: "16rem" ,'height':'24rem'}}>
+               <Card.Img variant="top" style={{'width':'238px','height':'160px','textAlign':'center','marginTop':'5px','marginLeft':'7px','marginRight':'10px'}} src={m?.image} />
+               <Card.Body>
+                <Card.Title className="title" style={{'fontWeight':'bold'}}>{m?.title}</Card.Title>
+                <Card.Text className="description">{m?.discription}</Card.Text>
+                <Button variant="none" className="USDButton">
+                <h6
+                    className="price"
+                    style={{ width: "65px", "marginTop": "35px" }}
+                  >
+                    0.28 USD
+                  </h6>
+                  {m?.price} USD
                 </Button>
-                <Button className="" variant="success">
-                  {" "}
-                  Buy Now{" "}
-                </Button>
-              </Card.Body>
-            </Card>
-            </div>
-   
-            <div className="col-lg-3">
-            <Card style={{ width: "17rem",'marginTop':'50px','height':'22rem' }}>
-              <Card.Img variant="top" src={beckry} alt="beckry" />
-              <Card.Body>
-                <Card.Title style={{ color: "black" }}>
-                  Product Title
-                </Card.Title>
-                <Card.Text>Space for a small product description </Card.Text>
-                <Button
-                  variant="Light"
-                  className="USDButton "
-                  style={{ "margin-right": "10px" }}
-                >
-                  1.48 USD
-                </Button>
-                <Button className="" variant="success">
-                  {" "}
-                  Buy Now{" "}
-                </Button>
+                <Button className="buyNow" variant="success">Buy Now</Button>
               </Card.Body>
             </Card>
           </div>
+        ))}
 
 
-          <div className="col-lg-3">
-            <Card style={{ width: "18rem",'marginop':'50px','height':'22rem' }}>
-              <Card.Img variant="top" src={beckry} alt="beckry" />
-              <Card.Body>
-                <Card.Title style={{ color: "black" }}>
-                  Product Title
-                </Card.Title>
-                <Card.Text>Space for a small product description </Card.Text>
-                <Button
-                  variant="Light"
-                  className="USDButton "
-                  style={{ "margin-right": "10px" }}
+              {/* <div className="col-lg-4">
+                <Card
+                  style={{ width: "17rem", marginTop: "50px", height: "22rem" }}
                 >
-                  1.48 USD
-                </Button>
-                <Button className="" variant="success">
-                  {" "}
-                  Buy Now{" "}
-                </Button>
-              </Card.Body>
-            </Card>
+                  <Card.Img variant="top" src={beckry} alt="beckry" />
+                  <Card.Body>
+                    <Card.Title style={{ color: "black" }}>
+                      Product Title
+                    </Card.Title>
+                    <Card.Text>
+                      Space for a small product description{" "}
+                    </Card.Text>
+                    <Button
+                      variant="Light"
+                      className="USDButton "
+                      style={{ marginRight: "10px" }}
+                    >
+                      1.48 USD
+                    </Button>
+                    <Button className="" variant="success">
+                      {" "}
+                      Buy Now{" "}
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </div>
+
+              <div className="col-lg-4">
+                <Card
+                  style={{ width: "17rem", marginTop: "50px", height: "22rem" }}
+                >
+                  <Card.Img variant="top" src={beckry} alt="beckry" />
+                  <Card.Body>
+                    <Card.Title style={{ color: "black" }}>
+                      Product Title
+                    </Card.Title>
+                    <Card.Text>
+                      Space for a small product description{" "}
+                    </Card.Text>
+                    <Button
+                      variant="Light"
+                      className="USDButton "
+                      style={{ marginRight: "10px" }}
+                    >
+                      1.48 USD
+                    </Button>
+                    <Button className="" variant="success">
+                      {" "}
+                      Buy Now{" "}
+                    </Button>
+                    <h6
+                      className="price"
+                      style={{ width: "65px", "margin-top": "35px" }}
+                    >
+                      0.28 USD
+                    </h6>
+                  </Card.Body>
+                </Card>
+              </div>
+
+              <div className="col-lg-4">
+                <Card
+                  style={{ width: "17rem", marginTop: "50px", height: "22rem" }}
+                >
+                  <Card.Img variant="top" src={beckry} alt="beckry" />
+                  <Card.Body>
+                    <Card.Title style={{ color: "black" }}>
+                      Product Title
+                    </Card.Title>
+                    <Card.Text>
+                      Space for a small product description{" "}
+                    </Card.Text>
+                    <Button
+                      variant="Light"
+                      className="USDButton "
+                      style={{ marginRight: "10px" }}
+                    >
+                      1.48 USD
+                    </Button>
+                    <Button className="" variant="success">
+                      {" "}
+                      Buy Now{" "}
+                    </Button>
+                    <h6
+                      className="price"
+                      style={{ width: "65px", "margin-top": "35px" }}
+                    >
+                      0.28 USD
+                    </h6>
+                  </Card.Body>
+                </Card>
+              </div>
+
+              <div className="col-lg-4 mt-5">
+                <Card
+                  style={{ width: "18rem", marginTop: "50px", height: "22rem" }}
+                >
+                  <Card.Img variant="top" src={beckry} alt="beckry" />
+                  <Card.Body>
+                    <Card.Title style={{ color: "black" }}>
+                      Product Title
+                    </Card.Title>
+                    <Card.Text>
+                      Space for a small product description{" "}
+                    </Card.Text>
+                    <Button
+                      variant="Light"
+                      className="USDButton "
+                      style={{ marginRight: "10px" }}
+                    >
+                      1.48 USD
+                    </Button>
+                    <Button className="" variant="success">
+                      {" "}
+                      Buy Now{" "}
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </div>
+
+              <div className="col-lg-4 mt-5">
+                <Card
+                  style={{ width: "17rem", marginTop: "50px", height: "22rem" }}
+                >
+                  <Card.Img variant="top" src={beckry} alt="beckry" />
+                  <Card.Body>
+                    <Card.Title style={{ color: "black" }}>
+                      Product Title
+                    </Card.Title>
+                    <Card.Text>
+                      Space for a small product description{" "}
+                    </Card.Text>
+                    <Button
+                      variant="Light"
+                      className="USDButton "
+                      style={{ marginRight: "10px" }}
+                    >
+                      1.48 USD
+                    </Button>
+                    <Button className="" variant="success">
+                      {" "}
+                      Buy Now{" "}
+                    </Button>
+                    <h6
+                      className="price"
+                      style={{ width: "65px", "margin-top": "35px" }}
+                    >
+                      0.28 USD
+                    </h6>
+                  </Card.Body>
+                </Card>
+              </div>
+
+              <div className="col-lg-4 mt-5">
+                <Card
+                  style={{ width: "17rem", marginTop: "50px", height: "22rem" }}
+                >
+                  <Card.Img variant="top" src={beckry} alt="beckry" />
+                  <Card.Body>
+                    <Card.Title style={{ color: "black" }}>
+                      Product Title
+                    </Card.Title>
+                    <Card.Text>
+                      Space for a small product description{" "}
+                    </Card.Text>
+                    <Button
+                      variant="Light"
+                      className="USDButton "
+                      style={{ marginRight: "10px" }}
+                    >
+                      1.48 USD
+                    </Button>
+                    <Button className="" variant="success">
+                      {" "}
+                      Buy Now{" "}
+                    </Button>
+                    <h6
+                      className="price"
+                      style={{ width: "65px", "margin-top": "35px" }}
+                    >
+                      0.28 USD
+                    </h6>
+                  </Card.Body>
+                </Card>
+              </div> */}
             </div>
-             */}
-      </div>
-      
-      {/* </CDBSidebar> */}
+          </div>
+        </div>
+        {/* </CDBSidebar> */}
 
-      {/* {[1,2,3].map()} */}
+        {/* {[1,2,3].map()} */}
 
-{/* no side bar */}
+        {/* no side bar */}
 
-      {/* <div className="main1">
+        {/* <div className="main1">
         <div className="container">
           <div className="row">
             // <div className="col-lg-3 mt-3">
@@ -390,7 +555,6 @@ export function SideNav(){
         </div>
       </div> */}
       </div>
-   
-      </>
-    )
+    </>
+  );
 }

@@ -2,32 +2,34 @@ import { React } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
-import './HeaderThird.css'
-// import style-css from '../style-css/HomePage.css';
+import "./HeaderThird.css";
+import { NavLink } from "react-bootstrap";
+
+
 
 export function HeaderThird() {
   return (
-    <div className="navbar3">
-    <Navbar
-      collapseOnSelect
-      expand="lg"
-      bg="light"
-      variant="light"
-      style={{ margin: "20px" }}
-    >
-      <Container>
-        {/* <Navbar.Toggle href="" >Bakery</Navbar.Toggle> */}
-        <Navbar aria-controls="responsive-navbar-nav" />
-        {/* <Navbar.Collapse id="responsive-navbar-nav"> */}
+    // <div className="navbar3">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="light"
+        variant="light"
+        style={{ margin: "20px" }}
+      >
+        <Container>
+          {/* <Navbar.Toggle href="" >Bakery</Navbar.Toggle> */}
+          <Navbar aria-controls="responsive-navbar-nav" />
+          {/* <Navbar.Collapse id="responsive-navbar-nav"> */}
           <Dropdown>
             <Dropdown.Toggle variant="light" id="dropdown-basic">
               Bakery
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="">Action</Dropdown.Item>
-              <Dropdown.Item href="">Another action</Dropdown.Item>
-              <Dropdown.Item href="">Something else</Dropdown.Item>
+              <NavLink to="/inventory">Inventory</NavLink>
+              <Dropdown.Item >Another action</Dropdown.Item>
+              <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
@@ -36,9 +38,9 @@ export function HeaderThird() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="">Action</Dropdown.Item>
-              <Dropdown.Item href="">Another action</Dropdown.Item>
-              <Dropdown.Item href="">Something else</Dropdown.Item>
+              <Dropdown.Item >Action</Dropdown.Item>
+              <Dropdown.Item >Another action</Dropdown.Item>
+              <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
@@ -47,9 +49,9 @@ export function HeaderThird() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="">Action</Dropdown.Item>
-              <Dropdown.Item href="">Another action</Dropdown.Item>
-              <Dropdown.Item href="">Something else</Dropdown.Item>
+              <Dropdown.Item >Action</Dropdown.Item>
+              <Dropdown.Item>Another action</Dropdown.Item>
+              <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
@@ -58,9 +60,9 @@ export function HeaderThird() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="">Action</Dropdown.Item>
-              <Dropdown.Item href="">Another action</Dropdown.Item>
-              <Dropdown.Item href="">Something else</Dropdown.Item>
+              <Dropdown.Item >Action</Dropdown.Item>
+              <Dropdown.Item >Another action</Dropdown.Item>
+              <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
@@ -69,9 +71,9 @@ export function HeaderThird() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="">Action</Dropdown.Item>
-              <Dropdown.Item href="">Another action</Dropdown.Item>
-              <Dropdown.Item href="">Something else</Dropdown.Item>
+              <Dropdown.Item >Action</Dropdown.Item>
+              <Dropdown.Item >Another action</Dropdown.Item>
+              <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
@@ -80,9 +82,9 @@ export function HeaderThird() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="">Action</Dropdown.Item>
-              <Dropdown.Item href="">Another action</Dropdown.Item>
-              <Dropdown.Item href="">Something else</Dropdown.Item>
+              <Dropdown.Item >Action</Dropdown.Item>
+              <Dropdown.Item >Another action</Dropdown.Item>
+              <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
@@ -91,9 +93,9 @@ export function HeaderThird() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="">Action</Dropdown.Item>
-              <Dropdown.Item href="">Another action</Dropdown.Item>
-              <Dropdown.Item href="">Something else</Dropdown.Item>
+              <Dropdown.Item >Action</Dropdown.Item>
+              <Dropdown.Item>Another action</Dropdown.Item>
+              <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
@@ -102,15 +104,14 @@ export function HeaderThird() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="">Action</Dropdown.Item>
-              <Dropdown.Item href="">Another action</Dropdown.Item>
-              <Dropdown.Item href="">Something else</Dropdown.Item>
+              <Dropdown.Item >Action</Dropdown.Item>
+              <Dropdown.Item >Another action</Dropdown.Item>
+              <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        {/* </Navbar.Collapse> */}
-      </Container>
-    </Navbar>
-  </div>
- 
-  )
+          {/* </Navbar.Collapse> */}
+        </Container>
+      </Navbar>
+    // </div>
+  );
 }

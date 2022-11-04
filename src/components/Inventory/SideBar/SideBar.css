@@ -17,15 +17,18 @@
     color: black;
     font-weight: bold;
     font-size: 30px;
+    margin-left: 10px;
 }
 
 .head2 {
     font-size: 20px;
+    margin-left: 10px;
 }
 
 .brand h3 {
     color: black;
     font-weight: bold;
+    margin-left: 10px;
 }
 
 .text {
@@ -36,7 +39,7 @@
 
 .btnnnn {
     height: 50px;
-    width: 130px;
+    width: 125px;
     color: #A9A9A9;
     border-radius: 10px;
     border-color: black;
@@ -49,4 +52,42 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+.bot1 {
+    font-weight: bold;
+    height: 54px;
+    width: 190px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.bot2 {
+    font-weight: bold;
+    height: 45px;
+    width: 190px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.clr {
+    color: #A9A9A9;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.price1 {
+    text-decoration-line: line-through;
+    color: #A9A9A9;
+}
+
+.clr1 {
+    color: #6A983C;
+}
+
+.parent {
+    position: absolute;
+    margin-left: 260px;
 }

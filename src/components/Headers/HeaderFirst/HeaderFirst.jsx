@@ -2,10 +2,7 @@ import { React } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import styles from "../../style-css/HomePage.css";
-// import style-css from '../style-css/HomePage.css';
-import './HeaderFirst.css'
-
+import "./HeaderFirst.css";
 
 export function HeaderFirst() {
   return (
@@ -30,7 +27,7 @@ export function HeaderFirst() {
                   />
                   <Button variant="outline-success">Search</Button>
                 </Form> */}
-            <Nav >
+            <Nav>
               <Nav.Link href="" className="navbar-link">
                 Blog
               </Nav.Link>
@@ -44,6 +41,6 @@ export function HeaderFirst() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      </div>
-  )
- }
+    </div>
+  );
+}
