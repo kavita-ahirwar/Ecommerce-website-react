@@ -27,7 +27,7 @@ export function HeaderThird() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <NavLink to="/inventory">Inventory</NavLink>
+              <Dropdown.Item href="/inventory">Inventory</Dropdown.Item>
               <Dropdown.Item >Another action</Dropdown.Item>
               <Dropdown.Item >Something else</Dropdown.Item>
             </Dropdown.Menu>

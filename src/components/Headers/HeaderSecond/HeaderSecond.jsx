@@ -31,11 +31,11 @@ export function HeaderSecond() {
             title="All Categries"
             id="input-group-dropdown-1"
           >
-            <Dropdown.Item href="">Action</Dropdown.Item>
-            <Dropdown.Item href="">Another action</Dropdown.Item>
-            <Dropdown.Item href="">Something else here</Dropdown.Item>
+            <Dropdown.Item >Action</Dropdown.Item>
+            <Dropdown.Item >Another action</Dropdown.Item>
+            <Dropdown.Item >Something else here</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item href="">Separated link</Dropdown.Item>
+            <Dropdown.Item >Separated link</Dropdown.Item>
           </DropdownButton>
           <Form.Control
             aria-label="Text input with dropdown button"
@@ -43,12 +43,12 @@ export function HeaderSecond() {
           />
         </InputGroup>
         <Nav className="nav1">
-          <Nav.Link href="" className="link">
+          <Nav.Link  className="link">
             <span style={{ height: "500px" }}>
               <BsFillPersonFill />
             </span>
           </Nav.Link>
-          <Nav.Link eventKey={2} href="" className="link">
+          <Nav.Link eventKey={2}  className="link">
             <span>
               <BsCart />
             </span>
